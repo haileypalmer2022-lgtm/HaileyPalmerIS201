@@ -37,6 +37,7 @@ body {
     margin: 20px auto;
     border-radius: 10px; 
     float: left;
+    clear: both;
 }
 
 /* Video box */
@@ -148,6 +149,7 @@ body {
     margin-top:0px;
     align-items: center;
 }
+
 
 
 
