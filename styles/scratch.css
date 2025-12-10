@@ -7,7 +7,7 @@ body {
 
 /* Header box (DIV #1) */
 .header-box {
-    background-color: #dce8ff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
@@ -16,14 +16,14 @@ body {
 .intro-box {
     background-color: #ffffff;
     padding: 20px;               /* ← This makes padding work */
-    border-left: 5px solid #4a6cf7;
+    border-radius: 10px;
     margin: 20px;
 }
 
 
 /* List box (DIV #3) */
 .list-box {
-    background: grey;
+    background: #ffffff;
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
@@ -31,10 +31,12 @@ body {
 
 /* Image styling */
 .image-box img {
-    max-width: 300px;
+    max-width: 400px;
+    height: 400 px;
     display: block;
     margin: 20px auto;
-    border-radius: 10px;
+    border-radius: 10px; 
+    float: left;
 }
 
 /* Video box */
@@ -140,5 +142,6 @@ body {
     margin-top:0px;
     align-items: center;
 }
+
 
 
