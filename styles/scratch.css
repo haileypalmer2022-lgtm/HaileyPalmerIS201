@@ -54,7 +54,8 @@ body {
 .tableau-box {
     padding: 30px;
     background: #fff;
-    border-radius: 10px;
+    border-radius: 10px; 
+    margin: 40px;
 }
 
 .top-hero {
@@ -141,6 +142,7 @@ body {
     margin-top:0px;
     align-items: center;
 }
+
 
 
 
