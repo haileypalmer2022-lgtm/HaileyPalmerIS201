@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Match the Song to the Lyric</title>
+
+  <style>
+    body {
+      background: #f3f6ff;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    .game-container {
+      background: white;
+      padding: 35px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 18px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #2e3a72;
+    }
+
+    #lyric {
+      font-size: 1.2rem;
+      font-style: italic;
+      margin: 25px 0;
+      min-height: 60px;
+      color: #4b4b4b;
+    }
+
+    .options button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      background: #2e3a72;
+      color: white;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .options button:hover {
+      background: #1f2855;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      min-height: 25px;
+    }
+
+    a.back-link {
+      display: inline-block;
+      margin-top: 25px;
+      color: #2e3a72;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="game-container">
+    <h1>Match the Song to the Lyric 🎵</h1>
+
+    <div id="lyric">Click "New Lyric" to begin!</div>
+
+    <div class="options" id="options"></div>
+
+    <button onclick="newLyric()" style="margin-top:20px;background:#4454a3;">New Lyric</button>
+
+    <div id="result"></div>
+
+    <a href="../index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <script>
+    const songs = [
+      {
+        lyric: "Cause baby, you're a firework.",
+        title: "Firework — Katy Perry"
+      },
+      {
+        lyric: "I got that sunshine in my pocket.",
+        title: "Can't Stop the Feeling — Justin Timberlake"
+      },
+      {
+        lyric: "You call me again, drunk in your Benz.",
+        title: "Happier Than Ever — Billie Eilish"
+      },
+      {
+        lyric: "I stay out too late, got nothing in my brain.",
+        title: "Shake It Off — Taylor Swift"
+      },
+      {
+        lyric: "Yeah, I'm gonna take my horse to the old town road.",
+        title: "Old Town Road — Lil Nas X"
+      }
+    ];
+
+    let currentSong = null;
+
+    function newLyric() {
+      document.getElementById("result").innerText = "";
+
+      currentSong = songs[Math.floor(Math.random() * songs.length)];
+
+      document.getElementById("lyric").innerText = `"${currentSong.lyric}"`;
+
+      const options = songs
+        .map(s => s.title)
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
+
+      if (!options.includes(currentSong.title)) {
+        options[Math.floor(Math.random() * 3)] = currentSong.title;
+      }
+
+      const optionsContainer = document.getElementById("options");
+      optionsContainer.innerHTML = "";
+
+      options.forEach(title => {
+        const btn = document.createElement("button");
+        btn.innerText = title;
+        btn.onclick = () => checkAnswer(title);
+        optionsContainer.appendChild(btn);
+      });
+    }
+
+    function checkAnswer(selected) {
+      const result = document.getElementById("result");
+      
+      if (selected === currentSong.title) {
+        result.style.color = "green";
+        result.innerText = "Correct! 🎉";
+      } else {
+        result.style.color = "crimson";
+        result.innerText = `Incorrect. The right answer was: ${currentSong.title}`;
+      }
+    }
+  </script>
+</body>
+</html>
