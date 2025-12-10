@@ -1,0 +1,131 @@
+/* hailey loll */
+body {
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 15px; 
+  color: #555555; 
+  background-color: white;
+} 
+ li{ 
+    font-size: 14px; 
+    font-style: italic;
+    font-weight: normal; 
+} 
+a{color: maroon;
+text-decoration: none;} 
+a:hover{
+      text-decoration: underline;
+      /* font-weight: bold;
+      font-size: 18px; */
+}
+a:visited{
+      color: blue;
+}
+.resumelistheading{ 
+   font-weight: bold; 
+   font-style: normal; 
+} 
+
+.expirencelistheading{
+      font-weight: bold;
+      font-style: normal;
+}
+
+.skillslistheading{
+      font-weight: bold;
+      font-style: normal;
+}
+
+.underline{text-decoration: underline;} 
+.bold{font-weight: bold;} 
+.justify{text-align: justify;} 
+
+.homebg{ 
+      background-image: url('../Images/hailey\ ghost\ pic.JPG'); 
+      background-position: top right;
+}
+
+.box1{
+border-width: 1px;
+border-style: solid;
+border-color: gray;
+}
+
+.box2{
+padding: 5px;
+
+}
+
+.box3{
+margin: 50px;
+}
+
+.social-icons a {
+    font-size: 40px;      /* bigger icons like her site */
+    color: black;         /* black like hers */
+    margin-right: 18px;   /* spacing between icons */
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #000000;       /* stays black but looks bold on hover */
+    transform: scale(1.1); /* subtle grow effect like modern sites */
+}
+
+footer {
+    padding: 30px 0;
+}
+
+.social-icons a {
+    font-size: 40px;
+    color: black;
+    margin-right: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
