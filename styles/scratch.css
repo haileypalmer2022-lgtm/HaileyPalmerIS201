@@ -43,6 +43,9 @@ body {
 .video-box {
     text-align: center;
     margin: 40px;
+    display: block;
+    width: 100%;
+    clear: both;
 }
 
 /* Anchor link */
@@ -55,7 +58,10 @@ body {
     padding: 30px;
     background: #fff;
     border-radius: 10px; 
-    margin: 40px;
+    margin: 40px; 
+    display: block;
+    width: 100%
+    clear: both;
 }
 
 .top-hero {
@@ -142,6 +148,7 @@ body {
     margin-top:0px;
     align-items: center;
 }
+
 
 
 
